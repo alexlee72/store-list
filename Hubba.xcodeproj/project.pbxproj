@@ -1,0 +1,643 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0563C46C67B99B28D11C2490 /* Pods_Hubba.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB85E80FBEFAF46CB642C91 /* Pods_Hubba.framework */; };
+		2B2D852F1E34155C001A5B10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B2D852D1E34155C001A5B10 /* Main.storyboard */; };
+		2B2D85311E34155C001A5B10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B2D85301E34155C001A5B10 /* Assets.xcassets */; };
+		2B2D85341E34155C001A5B10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B2D85321E34155C001A5B10 /* LaunchScreen.storyboard */; };
+		2B2D85421E341858001A5B10 /* HubbaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D85411E341858001A5B10 /* HubbaTests.swift */; };
+		2B2D854B1E3418EF001A5B10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D854A1E3418EF001A5B10 /* AppDelegate.swift */; };
+		2B2D85521E341AE7001A5B10 /* SelectCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D85511E341AE7001A5B10 /* SelectCityViewController.swift */; };
+		2B2D85541E341AFC001A5B10 /* StoreListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D85531E341AFC001A5B10 /* StoreListViewController.swift */; };
+		2B2D85561E341B09001A5B10 /* StoreDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D85551E341B09001A5B10 /* StoreDetailViewController.swift */; };
+		2B2D85591E341BD2001A5B10 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D85581E341BD2001A5B10 /* Store.swift */; };
+		2B2D855B1E341BF2001A5B10 /* SelectCityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D855A1E341BF2001A5B10 /* SelectCityService.swift */; };
+		2B2D855D1E341C04001A5B10 /* StoreListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D855C1E341C04001A5B10 /* StoreListService.swift */; };
+		2B2D855F1E341C12001A5B10 /* StoreDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D855E1E341C12001A5B10 /* StoreDetailService.swift */; };
+		2EB080BDEBC10CD0010E9D64 /* Pods_HubbaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83164BE3955A18029A497E90 /* Pods_HubbaTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2B2D85441E341858001A5B10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B2D851E1E34155C001A5B10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B2D85251E34155C001A5B10;
+			remoteInfo = Hubba;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		230B8F9E572F6CD71DE93D9E /* Pods-Hubba.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hubba.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hubba/Pods-Hubba.release.xcconfig"; sourceTree = "<group>"; };
+		2B2D85261E34155C001A5B10 /* Hubba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hubba.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B2D852E1E34155C001A5B10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2B2D85301E34155C001A5B10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B2D85331E34155C001A5B10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2B2D85351E34155C001A5B10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B2D853F1E341857001A5B10 /* HubbaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HubbaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B2D85411E341858001A5B10 /* HubbaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubbaTests.swift; sourceTree = "<group>"; };
+		2B2D85431E341858001A5B10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B2D854A1E3418EF001A5B10 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Classes/AppDelegate.swift; sourceTree = "<group>"; };
+		2B2D85511E341AE7001A5B10 /* SelectCityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectCityViewController.swift; path = Classes/SelectCityViewController.swift; sourceTree = "<group>"; };
+		2B2D85531E341AFC001A5B10 /* StoreListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoreListViewController.swift; path = Classes/StoreListViewController.swift; sourceTree = "<group>"; };
+		2B2D85551E341B09001A5B10 /* StoreDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoreDetailViewController.swift; path = Classes/StoreDetailViewController.swift; sourceTree = "<group>"; };
+		2B2D85581E341BD2001A5B10 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Store.swift; path = Classes/Store.swift; sourceTree = "<group>"; };
+		2B2D855A1E341BF2001A5B10 /* SelectCityService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectCityService.swift; path = Classes/SelectCityService.swift; sourceTree = "<group>"; };
+		2B2D855C1E341C04001A5B10 /* StoreListService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoreListService.swift; path = Classes/StoreListService.swift; sourceTree = "<group>"; };
+		2B2D855E1E341C12001A5B10 /* StoreDetailService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoreDetailService.swift; path = Classes/StoreDetailService.swift; sourceTree = "<group>"; };
+		83164BE3955A18029A497E90 /* Pods_HubbaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HubbaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5B064FD9A8F6CFE08163C5F /* Pods-HubbaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HubbaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HubbaTests/Pods-HubbaTests.release.xcconfig"; sourceTree = "<group>"; };
+		CBB85E80FBEFAF46CB642C91 /* Pods_Hubba.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hubba.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBB8E01AB391C3758C7BB54C /* Pods-HubbaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HubbaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HubbaTests/Pods-HubbaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D345B0321A1C768D29919F8B /* Pods-Hubba.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hubba.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hubba/Pods-Hubba.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B2D85231E34155C001A5B10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0563C46C67B99B28D11C2490 /* Pods_Hubba.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B2D853C1E341857001A5B10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EB080BDEBC10CD0010E9D64 /* Pods_HubbaTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B2D851D1E34155C001A5B10 = {
+			isa = PBXGroup;
+			children = (
+				2B2D85281E34155C001A5B10 /* Hubba */,
+				2B2D85401E341858001A5B10 /* HubbaTests */,
+				2B2D85271E34155C001A5B10 /* Products */,
+				EEEDE4B2A5B5E46DC236BCA7 /* Pods */,
+				FB960CA8B6BEC8A881C38C9E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2B2D85271E34155C001A5B10 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B2D85261E34155C001A5B10 /* Hubba.app */,
+				2B2D853F1E341857001A5B10 /* HubbaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B2D85281E34155C001A5B10 /* Hubba */ = {
+			isa = PBXGroup;
+			children = (
+				2B2D85571E341B10001A5B10 /* Models */,
+				2B2D854D1E341912001A5B10 /* Features */,
+				2B2D854C1E34190A001A5B10 /* Network */,
+				2B2D85491E3418C4001A5B10 /* AppDelegate */,
+				2B2D85301E34155C001A5B10 /* Assets.xcassets */,
+				2B2D85321E34155C001A5B10 /* LaunchScreen.storyboard */,
+				2B2D85351E34155C001A5B10 /* Info.plist */,
+			);
+			path = Hubba;
+			sourceTree = "<group>";
+		};
+		2B2D85401E341858001A5B10 /* HubbaTests */ = {
+			isa = PBXGroup;
+			children = (
+				2B2D85411E341858001A5B10 /* HubbaTests.swift */,
+				2B2D85431E341858001A5B10 /* Info.plist */,
+			);
+			path = HubbaTests;
+			sourceTree = "<group>";
+		};
+		2B2D85491E3418C4001A5B10 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				2B2D854A1E3418EF001A5B10 /* AppDelegate.swift */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		2B2D854C1E34190A001A5B10 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		2B2D854D1E341912001A5B10 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				2B2D852D1E34155C001A5B10 /* Main.storyboard */,
+				2B2D854E1E341AA0001A5B10 /* SelectCity */,
+				2B2D854F1E341AA9001A5B10 /* StoreList */,
+				2B2D85501E341AB6001A5B10 /* StoreDetail */,
+			);
+			name = Features;
+			sourceTree = "<group>";
+		};
+		2B2D854E1E341AA0001A5B10 /* SelectCity */ = {
+			isa = PBXGroup;
+			children = (
+				2B2D85511E341AE7001A5B10 /* SelectCityViewController.swift */,
+				2B2D855A1E341BF2001A5B10 /* SelectCityService.swift */,
+			);
+			name = SelectCity;
+			sourceTree = "<group>";
+		};
+		2B2D854F1E341AA9001A5B10 /* StoreList */ = {
+			isa = PBXGroup;
+			children = (
+				2B2D85531E341AFC001A5B10 /* StoreListViewController.swift */,
+				2B2D855C1E341C04001A5B10 /* StoreListService.swift */,
+			);
+			name = StoreList;
+			sourceTree = "<group>";
+		};
+		2B2D85501E341AB6001A5B10 /* StoreDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2B2D85551E341B09001A5B10 /* StoreDetailViewController.swift */,
+				2B2D855E1E341C12001A5B10 /* StoreDetailService.swift */,
+			);
+			name = StoreDetail;
+			sourceTree = "<group>";
+		};
+		2B2D85571E341B10001A5B10 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2B2D85581E341BD2001A5B10 /* Store.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		EEEDE4B2A5B5E46DC236BCA7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D345B0321A1C768D29919F8B /* Pods-Hubba.debug.xcconfig */,
+				230B8F9E572F6CD71DE93D9E /* Pods-Hubba.release.xcconfig */,
+				CBB8E01AB391C3758C7BB54C /* Pods-HubbaTests.debug.xcconfig */,
+				C5B064FD9A8F6CFE08163C5F /* Pods-HubbaTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FB960CA8B6BEC8A881C38C9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBB85E80FBEFAF46CB642C91 /* Pods_Hubba.framework */,
+				83164BE3955A18029A497E90 /* Pods_HubbaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B2D85251E34155C001A5B10 /* Hubba */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B2D85381E34155C001A5B10 /* Build configuration list for PBXNativeTarget "Hubba" */;
+			buildPhases = (
+				3503A6CB9C9FF05640C37D73 /* 📦 Check Pods Manifest.lock */,
+				2B2D85221E34155C001A5B10 /* Sources */,
+				2B2D85231E34155C001A5B10 /* Frameworks */,
+				2B2D85241E34155C001A5B10 /* Resources */,
+				2EF202A8FFB8F441CAB0CFE5 /* 📦 Embed Pods Frameworks */,
+				D381A30AD8880F30EE95F045 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hubba;
+			productName = Hubba;
+			productReference = 2B2D85261E34155C001A5B10 /* Hubba.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2B2D853E1E341857001A5B10 /* HubbaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B2D85481E341858001A5B10 /* Build configuration list for PBXNativeTarget "HubbaTests" */;
+			buildPhases = (
+				FB0D1E78B326243C273C875C /* 📦 Check Pods Manifest.lock */,
+				2B2D853B1E341857001A5B10 /* Sources */,
+				2B2D853C1E341857001A5B10 /* Frameworks */,
+				2B2D853D1E341857001A5B10 /* Resources */,
+				ED02B08E2003E357E14101B7 /* 📦 Embed Pods Frameworks */,
+				134D8B61A95C0C8378BC3FAA /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B2D85451E341858001A5B10 /* PBXTargetDependency */,
+			);
+			name = HubbaTests;
+			productName = HubbaTests;
+			productReference = 2B2D853F1E341857001A5B10 /* HubbaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B2D851E1E34155C001A5B10 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = AlexCJLee;
+				TargetAttributes = {
+					2B2D85251E34155C001A5B10 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = LBMLRG35N2;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
+					};
+					2B2D853E1E341857001A5B10 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2B2D85251E34155C001A5B10;
+					};
+				};
+			};
+			buildConfigurationList = 2B2D85211E34155C001A5B10 /* Build configuration list for PBXProject "Hubba" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B2D851D1E34155C001A5B10;
+			productRefGroup = 2B2D85271E34155C001A5B10 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B2D85251E34155C001A5B10 /* Hubba */,
+				2B2D853E1E341857001A5B10 /* HubbaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B2D85241E34155C001A5B10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B2D85341E34155C001A5B10 /* LaunchScreen.storyboard in Resources */,
+				2B2D85311E34155C001A5B10 /* Assets.xcassets in Resources */,
+				2B2D852F1E34155C001A5B10 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B2D853D1E341857001A5B10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		134D8B61A95C0C8378BC3FAA /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HubbaTests/Pods-HubbaTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2EF202A8FFB8F441CAB0CFE5 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hubba/Pods-Hubba-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3503A6CB9C9FF05640C37D73 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D381A30AD8880F30EE95F045 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hubba/Pods-Hubba-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED02B08E2003E357E14101B7 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HubbaTests/Pods-HubbaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB0D1E78B326243C273C875C /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B2D85221E34155C001A5B10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B2D85591E341BD2001A5B10 /* Store.swift in Sources */,
+				2B2D854B1E3418EF001A5B10 /* AppDelegate.swift in Sources */,
+				2B2D85561E341B09001A5B10 /* StoreDetailViewController.swift in Sources */,
+				2B2D85541E341AFC001A5B10 /* StoreListViewController.swift in Sources */,
+				2B2D855F1E341C12001A5B10 /* StoreDetailService.swift in Sources */,
+				2B2D855D1E341C04001A5B10 /* StoreListService.swift in Sources */,
+				2B2D855B1E341BF2001A5B10 /* SelectCityService.swift in Sources */,
+				2B2D85521E341AE7001A5B10 /* SelectCityViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B2D853B1E341857001A5B10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B2D85421E341858001A5B10 /* HubbaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2B2D85451E341858001A5B10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B2D85251E34155C001A5B10 /* Hubba */;
+			targetProxy = 2B2D85441E341858001A5B10 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2B2D852D1E34155C001A5B10 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B2D852E1E34155C001A5B10 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2B2D85321E34155C001A5B10 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B2D85331E34155C001A5B10 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2B2D85361E34155C001A5B10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2B2D85371E34155C001A5B10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B2D85391E34155C001A5B10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D345B0321A1C768D29919F8B /* Pods-Hubba.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = LBMLRG35N2;
+				INFOPLIST_FILE = Hubba/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexcjlee.Hubba;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		2B2D853A1E34155C001A5B10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 230B8F9E572F6CD71DE93D9E /* Pods-Hubba.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = LBMLRG35N2;
+				INFOPLIST_FILE = Hubba/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexcjlee.Hubba;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		2B2D85461E341858001A5B10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBB8E01AB391C3758C7BB54C /* Pods-HubbaTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HubbaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexcjlee.HubbaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hubba.app/Hubba";
+			};
+			name = Debug;
+		};
+		2B2D85471E341858001A5B10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5B064FD9A8F6CFE08163C5F /* Pods-HubbaTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HubbaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexcjlee.HubbaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hubba.app/Hubba";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B2D85211E34155C001A5B10 /* Build configuration list for PBXProject "Hubba" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B2D85361E34155C001A5B10 /* Debug */,
+				2B2D85371E34155C001A5B10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B2D85381E34155C001A5B10 /* Build configuration list for PBXNativeTarget "Hubba" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B2D85391E34155C001A5B10 /* Debug */,
+				2B2D853A1E34155C001A5B10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B2D85481E341858001A5B10 /* Build configuration list for PBXNativeTarget "HubbaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B2D85461E341858001A5B10 /* Debug */,
+				2B2D85471E341858001A5B10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B2D851E1E34155C001A5B10 /* Project object */;
+}

@@ -1,0 +1,6 @@
+framework module Pods_HubbaTests {
+  umbrella header "Pods-HubbaTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
