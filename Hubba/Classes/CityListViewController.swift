@@ -8,18 +8,11 @@
 
 import UIKit
 
-protocol SelectCityDelegate: class
-{
-    func didSelectCity(_ cityId: String)
-}
-
-class SelectCityViewController: UIViewController
+class CityListViewController: UIViewController
 {
     @IBOutlet private weak var tableView: UITableView!
-    @IBOutlet weak var doneButton: UIBarButtonItem!
     fileprivate let cellIdentifier = "cityCell"
     fileprivate var selectedCityId: String?
-    weak var delegate: SelectCityDelegate?
     fileprivate lazy var cities: [City] = {
         var cities = [City]()
         cities.append(City(name: "Toronto", cityId: "1"))
@@ -37,23 +30,10 @@ class SelectCityViewController: UIViewController
     {
         super.didReceiveMemoryWarning()
     }
-    
-    @IBAction func cancelButtonTapped(_ sender: Any)
-    {
-        dismiss(animated: true, completion: nil)
-    }
-
-    @IBAction func doneButtonTapped(_ sender: Any)
-    {
-        //TODO - pass selected city's id to store list view controller
-        dismiss(animated: true, completion: {
-            self.delegate?.didSelectCity(self.selectedCityId!)
-        })
-    }
 }
 
 //MARK: - UITableViewDataSource
-extension SelectCityViewController: UITableViewDataSource
+extension CityListViewController: UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -71,15 +51,13 @@ extension SelectCityViewController: UITableViewDataSource
 }
 
 //MARK: - UITableViewDelegate
-extension SelectCityViewController: UITableViewDelegate
+extension CityListViewController: UITableViewDelegate
 {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
         let city = cities[indexPath.row]
         selectedCityId = city.cityId
-        
-        doneButton.isEnabled = true
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath)

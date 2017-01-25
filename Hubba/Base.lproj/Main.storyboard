@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dP1-Yf-UcJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XEc-CM-5SY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Select City-->
+        <!--Cities-->
         <scene sceneID="HGd-H1-uRu">
             <objects>
-                <viewController id="1NB-si-ZXl" customClass="SelectCityViewController" customModule="Hubba" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1NB-si-ZXl" customClass="CityListViewController" customModule="Hubba" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6EQ-do-eJi"/>
                         <viewControllerLayoutGuide type="bottom" id="wUh-jg-FmX"/>
@@ -42,6 +42,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="U42-vu-Tm3"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -52,26 +55,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Select City" id="jn7-9y-81Z">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="giG-ax-8Ds">
-                            <connections>
-                                <action selector="cancelButtonTapped:" destination="1NB-si-ZXl" id="rZz-jV-HXb"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Done" id="jMZ-wA-YN6">
-                            <connections>
-                                <action selector="doneButtonTapped:" destination="1NB-si-ZXl" id="cmE-xV-xfW"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Cities" id="jn7-9y-81Z"/>
                     <connections>
-                        <outlet property="doneButton" destination="jMZ-wA-YN6" id="InY-Pv-bG4"/>
                         <outlet property="tableView" destination="amT-48-fMh" id="vgf-Cx-wBG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Up-2r-tUg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2624.8000000000002" y="421.43928035982015"/>
+            <point key="canvasLocation" x="183" y="793"/>
         </scene>
         <!--Stores-->
         <scene sceneID="tne-QT-ifu">
@@ -110,20 +101,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Stores" id="cgO-Tb-gM5">
-                        <barButtonItem key="rightBarButtonItem" title="Select City" id="pzb-Bz-RL8">
-                            <connections>
-                                <segue destination="XEc-CM-5SY" kind="presentation" id="eUw-Lb-g1w"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Stores" id="cgO-Tb-gM5"/>
                     <connections>
                         <outlet property="tableView" destination="e9W-7o-5dq" id="pD7-uW-tqF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="912.79999999999995" y="792.95352323838085"/>
+            <point key="canvasLocation" x="1030" y="793"/>
         </scene>
         <!--Store Details-->
         <scene sceneID="lEq-rH-4jf">
@@ -141,25 +126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JDW-Bz-ntg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1834" y="1200"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="6Z9-8J-uyw">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dP1-Yf-UcJ" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Phq-sa-qDa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Smy-rl-ZRN"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eg8-Fx-8tV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="60" y="792.95352323838085"/>
+            <point key="canvasLocation" x="1868" y="793"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BMn-8J-bdn">
@@ -177,7 +144,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Otk-fG-TCt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1832.8" y="422.33883058470769"/>
+            <point key="canvasLocation" x="-607" y="793"/>
         </scene>
     </scenes>
 </document>

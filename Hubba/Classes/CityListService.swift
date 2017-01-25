@@ -8,6 +8,6 @@
 
 import UIKit
 
-class SelectCityService: NSObject {
+class CityListService: NSObject {
 
 }

@@ -43,20 +43,9 @@ class StoreListViewController: UIViewController
     //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        let navigationController = segue.destination as! UINavigationController
-        let viewController = navigationController.topViewController as! SelectCityViewController
-        viewController.delegate = self
     }
 }
 
-//MARK: - SelectCityDelegate
-extension StoreListViewController: SelectCityDelegate
-{
-    func didSelectCity(_ cityId: String)
-    {
-        print("selected city id: \(cityId)")
-    }
-}
 
 //MARK: - UITableViewDataSource
 extension StoreListViewController: UITableViewDataSource
