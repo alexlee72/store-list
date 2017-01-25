@@ -19,6 +19,7 @@ import UIKit
 class StoreListViewController: UIViewController
 {
     @IBOutlet weak var tableView: UITableView!
+    var city: City!
     fileprivate let cellIdentifier = "StoreCell"
     fileprivate let service = StoreListService()
 
@@ -37,6 +38,7 @@ class StoreListViewController: UIViewController
     //MARK: - Private
     private func setupUI()
     {
+        navigationItem.title = city.displayName
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
     }
     

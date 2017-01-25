@@ -12,7 +12,7 @@ class CityListViewController: UIViewController
 {
     @IBOutlet private weak var tableView: UITableView!
     fileprivate let cellIdentifier = "cityCell"
-    fileprivate var selectedCityId: String?
+    fileprivate var selectedCity: City?
     fileprivate var service = CityListService()
     
     override func viewDidLoad()
@@ -24,6 +24,13 @@ class CityListViewController: UIViewController
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
+    }
+    
+    //MARK:- Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let viewController = segue.destination as! StoreListViewController
+        viewController.city = selectedCity!
     }
 }
 
@@ -45,3 +52,13 @@ extension CityListViewController: UITableViewDataSource
     }
 }
 
+//MARK: - UITableViewDelegate
+extension CityListViewController: UITableViewDelegate
+{
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath?
+    {
+        selectedCity = service.item(at: indexPath.row)
+        
+        return indexPath
+    }
+}
