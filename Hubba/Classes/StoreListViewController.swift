@@ -8,15 +8,24 @@
 
 import UIKit
 
+/**
+ stores by location
+ http://lcboapi.com/stores?lat=43.6809&lon=-79.3339
+ stores by search
+ http://lcboapi.com/stores?geo=m4j4v7
+ store detail
+ http://lcboapi.com/stores/500
+ */
 class StoreListViewController: UIViewController
 {
     @IBOutlet weak var tableView: UITableView!
-    var stores = [Store]()
-    let cellIdentifier = "StoreCell"
-    
+    fileprivate let cellIdentifier = "StoreCell"
+    fileprivate let service = StoreListService()
+
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        service.loadStores()
         setupUI()
     }
 
@@ -29,27 +38,45 @@ class StoreListViewController: UIViewController
     private func setupUI()
     {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
-        
-        stores.append(Store(id: "1", name: "Store 1"))
-        stores.append(Store(id: "1", name: "Store 2"))
-        stores.append(Store(id: "1", name: "Store 3"))
-
+    }
+    
+    //MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let navigationController = segue.destination as! UINavigationController
+        let viewController = navigationController.topViewController as! SelectCityViewController
+        viewController.delegate = self
     }
 }
 
-extension StoreListViewController: UITableViewDataSource, UITableViewDelegate
+//MARK: - SelectCityDelegate
+extension StoreListViewController: SelectCityDelegate
+{
+    func didSelectCity(_ cityId: String)
+    {
+        print("selected city id: \(cityId)")
+    }
+}
+
+//MARK: - UITableViewDataSource
+extension StoreListViewController: UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return stores.count
+        return service.numberOfStores()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-        let store = stores[indexPath.row]
+        let store = service.store(at: indexPath.row)
         cell.textLabel?.text = store.name
         
         return cell
     }
+}
+
+extension StoreListViewController: UITableViewDelegate
+{
+    
 }

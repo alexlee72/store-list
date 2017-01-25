@@ -20,6 +20,7 @@
 		2B2D855B1E341BF2001A5B10 /* SelectCityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D855A1E341BF2001A5B10 /* SelectCityService.swift */; };
 		2B2D855D1E341C04001A5B10 /* StoreListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D855C1E341C04001A5B10 /* StoreListService.swift */; };
 		2B2D855F1E341C12001A5B10 /* StoreDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D855E1E341C12001A5B10 /* StoreDetailService.swift */; };
+		2BA58BDF1E38477C0035EF72 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA58BDE1E38477C0035EF72 /* City.swift */; };
 		2EB080BDEBC10CD0010E9D64 /* Pods_HubbaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83164BE3955A18029A497E90 /* Pods_HubbaTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		2B2D855A1E341BF2001A5B10 /* SelectCityService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectCityService.swift; path = Classes/SelectCityService.swift; sourceTree = "<group>"; };
 		2B2D855C1E341C04001A5B10 /* StoreListService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoreListService.swift; path = Classes/StoreListService.swift; sourceTree = "<group>"; };
 		2B2D855E1E341C12001A5B10 /* StoreDetailService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoreDetailService.swift; path = Classes/StoreDetailService.swift; sourceTree = "<group>"; };
+		2BA58BDE1E38477C0035EF72 /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = City.swift; path = Classes/City.swift; sourceTree = "<group>"; };
 		83164BE3955A18029A497E90 /* Pods_HubbaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HubbaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5B064FD9A8F6CFE08163C5F /* Pods-HubbaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HubbaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HubbaTests/Pods-HubbaTests.release.xcconfig"; sourceTree = "<group>"; };
 		CBB85E80FBEFAF46CB642C91 /* Pods_Hubba.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hubba.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				2B2D85581E341BD2001A5B10 /* Store.swift */,
+				2BA58BDE1E38477C0035EF72 /* City.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 			files = (
 				2B2D85591E341BD2001A5B10 /* Store.swift in Sources */,
 				2B2D854B1E3418EF001A5B10 /* AppDelegate.swift in Sources */,
+				2BA58BDF1E38477C0035EF72 /* City.swift in Sources */,
 				2B2D85561E341B09001A5B10 /* StoreDetailViewController.swift in Sources */,
 				2B2D85541E341AFC001A5B10 /* StoreListViewController.swift in Sources */,
 				2B2D855F1E341C12001A5B10 /* StoreDetailService.swift in Sources */,
