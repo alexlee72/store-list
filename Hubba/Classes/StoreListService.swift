@@ -16,6 +16,12 @@ class StoreListService: NSObject
     //MARK: - Public
     func loadStores()
     {
+        let storeRequest = Request.Store()
+        NetworkManager.shared.execute(storeRequest, success: { responseObject in
+            print(responseObject ?? "no response")
+        }, failure: { error in
+            print(error.localizedDescription)
+        })
         stores.append(Store(id: "1", name: "Store 1"))
         stores.append(Store(id: "1", name: "Store 2"))
         stores.append(Store(id: "1", name: "Store 3"))

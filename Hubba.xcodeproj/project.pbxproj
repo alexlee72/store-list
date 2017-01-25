@@ -21,6 +21,10 @@
 		2B2D855D1E341C04001A5B10 /* StoreListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D855C1E341C04001A5B10 /* StoreListService.swift */; };
 		2B2D855F1E341C12001A5B10 /* StoreDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D855E1E341C12001A5B10 /* StoreDetailService.swift */; };
 		2BA58BDF1E38477C0035EF72 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA58BDE1E38477C0035EF72 /* City.swift */; };
+		2BA58BE11E3850FE0035EF72 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA58BE01E3850FE0035EF72 /* NetworkManager.swift */; };
+		2BA58BE41E38619D0035EF72 /* APIExecutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA58BE31E38619D0035EF72 /* APIExecutable.swift */; };
+		2BA58BE71E3861D40035EF72 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA58BE61E3861D40035EF72 /* APIRequest.swift */; };
+		2BD02B3F1E39423A003B7213 /* Request+Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD02B3E1E39423A003B7213 /* Request+Store.swift */; };
 		2EB080BDEBC10CD0010E9D64 /* Pods_HubbaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83164BE3955A18029A497E90 /* Pods_HubbaTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +57,10 @@
 		2B2D855C1E341C04001A5B10 /* StoreListService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoreListService.swift; path = Classes/StoreListService.swift; sourceTree = "<group>"; };
 		2B2D855E1E341C12001A5B10 /* StoreDetailService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoreDetailService.swift; path = Classes/StoreDetailService.swift; sourceTree = "<group>"; };
 		2BA58BDE1E38477C0035EF72 /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = City.swift; path = Classes/City.swift; sourceTree = "<group>"; };
+		2BA58BE01E3850FE0035EF72 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = Classes/NetworkManager.swift; sourceTree = "<group>"; };
+		2BA58BE31E38619D0035EF72 /* APIExecutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIExecutable.swift; path = Classes/APIExecutable.swift; sourceTree = "<group>"; };
+		2BA58BE61E3861D40035EF72 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIRequest.swift; path = Classes/APIRequest.swift; sourceTree = "<group>"; };
+		2BD02B3E1E39423A003B7213 /* Request+Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Request+Store.swift"; path = "Classes/Request+Store.swift"; sourceTree = "<group>"; };
 		83164BE3955A18029A497E90 /* Pods_HubbaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HubbaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5B064FD9A8F6CFE08163C5F /* Pods-HubbaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HubbaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HubbaTests/Pods-HubbaTests.release.xcconfig"; sourceTree = "<group>"; };
 		CBB85E80FBEFAF46CB642C91 /* Pods_Hubba.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hubba.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +142,9 @@
 		2B2D854C1E34190A001A5B10 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				2BD02B3D1E3941CB003B7213 /* Request */,
+				2BA58BE21E3861810035EF72 /* Protocol */,
+				2BA58BE01E3850FE0035EF72 /* NetworkManager.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -183,6 +194,31 @@
 				2BA58BDE1E38477C0035EF72 /* City.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		2BA58BE21E3861810035EF72 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				2BA58BE31E38619D0035EF72 /* APIExecutable.swift */,
+			);
+			name = Protocol;
+			sourceTree = "<group>";
+		};
+		2BA58BE51E3861B60035EF72 /* ProtocolExtension */ = {
+			isa = PBXGroup;
+			children = (
+				2BA58BE61E3861D40035EF72 /* APIRequest.swift */,
+			);
+			name = ProtocolExtension;
+			sourceTree = "<group>";
+		};
+		2BD02B3D1E3941CB003B7213 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				2BA58BE51E3861B60035EF72 /* ProtocolExtension */,
+				2BD02B3E1E39423A003B7213 /* Request+Store.swift */,
+			);
+			name = Request;
 			sourceTree = "<group>";
 		};
 		EEEDE4B2A5B5E46DC236BCA7 /* Pods */ = {
@@ -411,12 +447,16 @@
 			files = (
 				2B2D85591E341BD2001A5B10 /* Store.swift in Sources */,
 				2B2D854B1E3418EF001A5B10 /* AppDelegate.swift in Sources */,
+				2BA58BE11E3850FE0035EF72 /* NetworkManager.swift in Sources */,
+				2BA58BE41E38619D0035EF72 /* APIExecutable.swift in Sources */,
 				2BA58BDF1E38477C0035EF72 /* City.swift in Sources */,
+				2BD02B3F1E39423A003B7213 /* Request+Store.swift in Sources */,
 				2B2D85561E341B09001A5B10 /* StoreDetailViewController.swift in Sources */,
 				2B2D85541E341AFC001A5B10 /* StoreListViewController.swift in Sources */,
 				2B2D855F1E341C12001A5B10 /* StoreDetailService.swift in Sources */,
 				2B2D855D1E341C04001A5B10 /* StoreListService.swift in Sources */,
 				2B2D855B1E341BF2001A5B10 /* SelectCityService.swift in Sources */,
+				2BA58BE71E3861D40035EF72 /* APIRequest.swift in Sources */,
 				2B2D85521E341AE7001A5B10 /* SelectCityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,6 +517,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -526,6 +567,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -554,6 +596,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D345B0321A1C768D29919F8B /* Pods-Hubba.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = LBMLRG35N2;
@@ -570,6 +613,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 230B8F9E572F6CD71DE93D9E /* Pods-Hubba.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = LBMLRG35N2;
