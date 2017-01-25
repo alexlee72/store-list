@@ -8,6 +8,6 @@
 
 struct City
 {
-    let name: String
-    let cityId: String
+    let displayName: String
+    let searchName: String
 }

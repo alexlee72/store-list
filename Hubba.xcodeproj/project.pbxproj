@@ -153,20 +153,20 @@
 			isa = PBXGroup;
 			children = (
 				2B2D852D1E34155C001A5B10 /* Main.storyboard */,
-				2B2D854E1E341AA0001A5B10 /* SelectCity */,
+				2B2D854E1E341AA0001A5B10 /* CityList */,
 				2B2D854F1E341AA9001A5B10 /* StoreList */,
 				2B2D85501E341AB6001A5B10 /* StoreDetail */,
 			);
 			name = Features;
 			sourceTree = "<group>";
 		};
-		2B2D854E1E341AA0001A5B10 /* SelectCity */ = {
+		2B2D854E1E341AA0001A5B10 /* CityList */ = {
 			isa = PBXGroup;
 			children = (
 				2B2D85511E341AE7001A5B10 /* CityListViewController.swift */,
 				2B2D855A1E341BF2001A5B10 /* CityListService.swift */,
 			);
-			name = SelectCity;
+			name = CityList;
 			sourceTree = "<group>";
 		};
 		2B2D854F1E341AA9001A5B10 /* StoreList */ = {

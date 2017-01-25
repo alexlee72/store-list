@@ -13,17 +13,12 @@ class CityListViewController: UIViewController
     @IBOutlet private weak var tableView: UITableView!
     fileprivate let cellIdentifier = "cityCell"
     fileprivate var selectedCityId: String?
-    fileprivate lazy var cities: [City] = {
-        var cities = [City]()
-        cities.append(City(name: "Toronto", cityId: "1"))
-        cities.append(City(name: "Ajax", cityId: "2"))
-            
-        return cities
-    }()
+    fileprivate var service = CityListService()
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        service.fetchData()
     }
 
     override func didReceiveMemoryWarning()
@@ -37,31 +32,16 @@ extension CityListViewController: UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return cities.count
+        return service.numberOfItems()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-        let city = cities[indexPath.row]
-        cell.textLabel?.text = city.name
+        let city = service.item(at: indexPath.row)
+        cell.textLabel?.text = city.displayName
         
         return cell
     }
 }
 
-//MARK: - UITableViewDelegate
-extension CityListViewController: UITableViewDelegate
-{
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-    {
-        tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
-        let city = cities[indexPath.row]
-        selectedCityId = city.cityId
-    }
-    
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath)
-    {
-        tableView.cellForRow(at: indexPath)?.accessoryType = .none
-    }
-}
