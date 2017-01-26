@@ -46,7 +46,6 @@ class StoreListViewController: UIViewController
     private func setupUI()
     {
         navigationItem.title = city.displayName
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
     }
     
     //MARK: - Navigation
@@ -66,9 +65,11 @@ extension StoreListViewController: UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! StoreCell
         let store = service.store(at: indexPath.row)
-        cell.textLabel?.text = store.name
+        cell.nameLabel.text = store.name
+        cell.addressLabel.text = store.address1
+        cell.telephoneLabel.text = store.telephone
         
         return cell
     }

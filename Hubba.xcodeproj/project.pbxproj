@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0563C46C67B99B28D11C2490 /* Pods_Hubba.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB85E80FBEFAF46CB642C91 /* Pods_Hubba.framework */; };
+		2B1A5A2E1E3AAED4001E8082 /* StoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A5A2D1E3AAED4001E8082 /* StoreCell.swift */; };
 		2B2D852F1E34155C001A5B10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B2D852D1E34155C001A5B10 /* Main.storyboard */; };
 		2B2D85311E34155C001A5B10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B2D85301E34155C001A5B10 /* Assets.xcassets */; };
 		2B2D85341E34155C001A5B10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B2D85321E34155C001A5B10 /* LaunchScreen.storyboard */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		230B8F9E572F6CD71DE93D9E /* Pods-Hubba.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hubba.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hubba/Pods-Hubba.release.xcconfig"; sourceTree = "<group>"; };
+		2B1A5A2D1E3AAED4001E8082 /* StoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoreCell.swift; path = Classes/StoreCell.swift; sourceTree = "<group>"; };
 		2B2D85261E34155C001A5B10 /* Hubba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hubba.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B2D852E1E34155C001A5B10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2B2D85301E34155C001A5B10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B1A5A2C1E3AAEBE001E8082 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2B1A5A2D1E3AAED4001E8082 /* StoreCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		2B2D851D1E34155C001A5B10 = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +182,7 @@
 		2B2D854F1E341AA9001A5B10 /* StoreList */ = {
 			isa = PBXGroup;
 			children = (
+				2B1A5A2C1E3AAEBE001E8082 /* Cell */,
 				2B2D85531E341AFC001A5B10 /* StoreListViewController.swift */,
 				2B2D855C1E341C04001A5B10 /* StoreListService.swift */,
 			);
@@ -448,6 +459,7 @@
 				2B2D85591E341BD2001A5B10 /* Store.swift in Sources */,
 				2B2D854B1E3418EF001A5B10 /* AppDelegate.swift in Sources */,
 				2BA58BE11E3850FE0035EF72 /* NetworkManager.swift in Sources */,
+				2B1A5A2E1E3AAED4001E8082 /* StoreCell.swift in Sources */,
 				2BA58BE41E38619D0035EF72 /* APIExecutable.swift in Sources */,
 				2BA58BDF1E38477C0035EF72 /* City.swift in Sources */,
 				2BD02B3F1E39423A003B7213 /* Request+Store.swift in Sources */,

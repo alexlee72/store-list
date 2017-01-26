@@ -21,6 +21,7 @@ class StoreListService: NSObject
     //MARK: - Public
     func fetchData(with cityName: String)
     {
+        stores.removeAll()
         let storeListRequest = Request.StoreList(searchText: cityName)
         NetworkManager.shared.execute(storeListRequest, success: { response in
             if let response = response as? [String: Any], let result = response["result"] as? [Any]
@@ -49,5 +50,4 @@ class StoreListService: NSObject
     {
         return stores[index]
     }
-    
 }
