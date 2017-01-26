@@ -11,9 +11,17 @@ import Alamofire
 
 struct Request
 {
-    struct Store: APIRequest
+    static let baseURL = "http://lcboapi.com"
+    
+    struct StoreList: APIRequest
     {
-        var path = "http://lcboapi.com/stores/500"
-        var method = HTTPMethod.get
+        let path = "/stores"
+        let method = HTTPMethod.get
+        var searchText: String
+        
+        func parameters() -> Parameters?
+        {
+            return ["geo": searchText]
+        }
     }
 }

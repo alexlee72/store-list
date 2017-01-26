@@ -8,23 +8,36 @@
 
 import UIKit
 
+protocol StoreListDelegate: class
+{
+    func didFinishFetchingData()
+}
+
 class StoreListService: NSObject
 {
     private var stores = [Store]()
-
+    weak var delegate: StoreListDelegate?
     
     //MARK: - Public
-    func loadStores()
+    func fetchData(with cityName: String)
     {
-        let storeRequest = Request.Store()
-        NetworkManager.shared.execute(storeRequest, success: { responseObject in
-            print(responseObject ?? "no response")
+        let storeListRequest = Request.StoreList(searchText: cityName)
+        NetworkManager.shared.execute(storeListRequest, success: { response in
+            if let response = response as? [String: Any], let result = response["result"] as? [Any]
+            {
+                for store in result
+                {
+                    if let storeData = store as? [String: Any]
+                    {
+                        self.stores.append(Store(with: storeData))
+                    }
+                }
+            }
+            
+            self.delegate?.didFinishFetchingData()
         }, failure: { error in
             print(error.localizedDescription)
         })
-        stores.append(Store(id: "1", name: "Store 1"))
-        stores.append(Store(id: "1", name: "Store 2"))
-        stores.append(Store(id: "1", name: "Store 3"))
     }
     
     func numberOfStores() -> Int

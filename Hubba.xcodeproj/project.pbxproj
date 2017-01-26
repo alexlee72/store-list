@@ -111,10 +111,10 @@
 		2B2D85281E34155C001A5B10 /* Hubba */ = {
 			isa = PBXGroup;
 			children = (
+				2B2D85491E3418C4001A5B10 /* AppDelegate */,
 				2B2D85571E341B10001A5B10 /* Models */,
 				2B2D854D1E341912001A5B10 /* Features */,
 				2B2D854C1E34190A001A5B10 /* Network */,
-				2B2D85491E3418C4001A5B10 /* AppDelegate */,
 				2B2D85301E34155C001A5B10 /* Assets.xcassets */,
 				2B2D85321E34155C001A5B10 /* LaunchScreen.storyboard */,
 				2B2D85351E34155C001A5B10 /* Info.plist */,

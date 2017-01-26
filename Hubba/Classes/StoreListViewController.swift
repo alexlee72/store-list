@@ -21,12 +21,13 @@ class StoreListViewController: UIViewController
     @IBOutlet weak var tableView: UITableView!
     var city: City!
     fileprivate let cellIdentifier = "StoreCell"
-    fileprivate let service = StoreListService()
+    fileprivate var service: StoreListService!
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        service.loadStores()
+        setupService()
+        service.fetchData(with: city.searchName)
         setupUI()
     }
 
@@ -36,6 +37,12 @@ class StoreListViewController: UIViewController
     }
     
     //MARK: - Private
+    private func setupService()
+    {
+        service = StoreListService()
+        service.delegate = self
+    }
+    
     private func setupUI()
     {
         navigationItem.title = city.displayName
@@ -70,4 +77,12 @@ extension StoreListViewController: UITableViewDataSource
 extension StoreListViewController: UITableViewDelegate
 {
     
+}
+
+extension StoreListViewController: StoreListDelegate
+{
+    func didFinishFetchingData()
+    {
+        tableView.reloadData()
+    }
 }
