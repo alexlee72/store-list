@@ -12,7 +12,7 @@
 		2B2D852F1E34155C001A5B10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B2D852D1E34155C001A5B10 /* Main.storyboard */; };
 		2B2D85311E34155C001A5B10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B2D85301E34155C001A5B10 /* Assets.xcassets */; };
 		2B2D85341E34155C001A5B10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B2D85321E34155C001A5B10 /* LaunchScreen.storyboard */; };
-		2B2D85421E341858001A5B10 /* HubbaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D85411E341858001A5B10 /* HubbaTests.swift */; };
+		2B2D85421E341858001A5B10 /* CityListServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D85411E341858001A5B10 /* CityListServiceTest.swift */; };
 		2B2D854B1E3418EF001A5B10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D854A1E3418EF001A5B10 /* AppDelegate.swift */; };
 		2B2D85521E341AE7001A5B10 /* CityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D85511E341AE7001A5B10 /* CityListViewController.swift */; };
 		2B2D85541E341AFC001A5B10 /* StoreListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D85531E341AFC001A5B10 /* StoreListViewController.swift */; };
@@ -48,7 +48,7 @@
 		2B2D85331E34155C001A5B10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B2D85351E34155C001A5B10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B2D853F1E341857001A5B10 /* HubbaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HubbaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B2D85411E341858001A5B10 /* HubbaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubbaTests.swift; sourceTree = "<group>"; };
+		2B2D85411E341858001A5B10 /* CityListServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListServiceTest.swift; sourceTree = "<group>"; };
 		2B2D85431E341858001A5B10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B2D854A1E3418EF001A5B10 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Classes/AppDelegate.swift; sourceTree = "<group>"; };
 		2B2D85511E341AE7001A5B10 /* CityListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CityListViewController.swift; path = Classes/CityListViewController.swift; sourceTree = "<group>"; };
@@ -135,7 +135,7 @@
 		2B2D85401E341858001A5B10 /* HubbaTests */ = {
 			isa = PBXGroup;
 			children = (
-				2B2D85411E341858001A5B10 /* HubbaTests.swift */,
+				2B2D85411E341858001A5B10 /* CityListServiceTest.swift */,
 				2B2D85431E341858001A5B10 /* Info.plist */,
 			);
 			path = HubbaTests;
@@ -477,7 +477,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B2D85421E341858001A5B10 /* HubbaTests.swift in Sources */,
+				2B2D85421E341858001A5B10 /* CityListServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,6 +611,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = LBMLRG35N2;
 				INFOPLIST_FILE = Hubba/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -628,6 +629,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = LBMLRG35N2;
 				INFOPLIST_FILE = Hubba/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
