@@ -28,3 +28,27 @@ struct Store: Deserializable
         telephone = data["telephone"] as? String
     }
 }
+
+struct StoreDetail: Deserializable
+{
+    var name: String?
+    var address1: String?
+    var telephone: String?
+    var city: String?
+    var postalCode: String?
+    var productCount: Int?
+    var inventoryCount: Int?
+    
+    init(with data: [String: Any])
+    {
+        let store = Store(with: data)
+        name = store.name
+        address1 = store.address1
+        telephone = store.telephone
+        
+        city = data["city"] as? String
+        postalCode = data["postal_code"] as? String
+        productCount = data["products_count"] as? Int
+        inventoryCount = data["inventory_count"] as? Int
+    }
+}

@@ -21,6 +21,7 @@
 		2B2D855B1E341BF2001A5B10 /* CityListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D855A1E341BF2001A5B10 /* CityListService.swift */; };
 		2B2D855D1E341C04001A5B10 /* StoreListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D855C1E341C04001A5B10 /* StoreListService.swift */; };
 		2B2D855F1E341C12001A5B10 /* StoreDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D855E1E341C12001A5B10 /* StoreDetailService.swift */; };
+		2B65ECDD1E3D113A009AD231 /* StoreDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B65ECDC1E3D113A009AD231 /* StoreDetailCell.swift */; };
 		2BA58BDF1E38477C0035EF72 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA58BDE1E38477C0035EF72 /* City.swift */; };
 		2BA58BE11E3850FE0035EF72 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA58BE01E3850FE0035EF72 /* NetworkManager.swift */; };
 		2BA58BE41E38619D0035EF72 /* APIExecutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA58BE31E38619D0035EF72 /* APIExecutable.swift */; };
@@ -58,6 +59,7 @@
 		2B2D855A1E341BF2001A5B10 /* CityListService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CityListService.swift; path = Classes/CityListService.swift; sourceTree = "<group>"; };
 		2B2D855C1E341C04001A5B10 /* StoreListService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoreListService.swift; path = Classes/StoreListService.swift; sourceTree = "<group>"; };
 		2B2D855E1E341C12001A5B10 /* StoreDetailService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoreDetailService.swift; path = Classes/StoreDetailService.swift; sourceTree = "<group>"; };
+		2B65ECDC1E3D113A009AD231 /* StoreDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoreDetailCell.swift; path = Classes/StoreDetailCell.swift; sourceTree = "<group>"; };
 		2BA58BDE1E38477C0035EF72 /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = City.swift; path = Classes/City.swift; sourceTree = "<group>"; };
 		2BA58BE01E3850FE0035EF72 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = Classes/NetworkManager.swift; sourceTree = "<group>"; };
 		2BA58BE31E38619D0035EF72 /* APIExecutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIExecutable.swift; path = Classes/APIExecutable.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 		2B2D85501E341AB6001A5B10 /* StoreDetail */ = {
 			isa = PBXGroup;
 			children = (
+				2B65ECDB1E3D111C009AD231 /* Cell */,
 				2B2D85551E341B09001A5B10 /* StoreDetailViewController.swift */,
 				2B2D855E1E341C12001A5B10 /* StoreDetailService.swift */,
 			);
@@ -205,6 +208,14 @@
 				2BA58BDE1E38477C0035EF72 /* City.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		2B65ECDB1E3D111C009AD231 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2B65ECDC1E3D113A009AD231 /* StoreDetailCell.swift */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		2BA58BE21E3861810035EF72 /* Protocol */ = {
@@ -459,6 +470,7 @@
 				2B2D85591E341BD2001A5B10 /* Store.swift in Sources */,
 				2B2D854B1E3418EF001A5B10 /* AppDelegate.swift in Sources */,
 				2BA58BE11E3850FE0035EF72 /* NetworkManager.swift in Sources */,
+				2B65ECDD1E3D113A009AD231 /* StoreDetailCell.swift in Sources */,
 				2B1A5A2E1E3AAED4001E8082 /* StoreCell.swift in Sources */,
 				2BA58BE41E38619D0035EF72 /* APIExecutable.swift in Sources */,
 				2BA58BDF1E38477C0035EF72 /* City.swift in Sources */,

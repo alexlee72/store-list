@@ -24,4 +24,15 @@ struct Request
             return ["geo": searchText]
         }
     }
+    
+    struct StoreInfo: APIRequest
+    {
+        var path = "/stores/%@"
+        let method = HTTPMethod.get
+        
+        init(storeID: Int)
+        {
+            path = String.init(format: path, String(storeID))
+        }
+    }
 }

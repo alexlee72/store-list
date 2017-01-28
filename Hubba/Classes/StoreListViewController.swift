@@ -23,6 +23,7 @@ class StoreListViewController: UIViewController
     var city: City!
     fileprivate let cellIdentifier = "StoreCell"
     fileprivate var service: StoreListService!
+    fileprivate var selectedStore: Store?
 
     override func viewDidLoad()
     {
@@ -30,6 +31,14 @@ class StoreListViewController: UIViewController
         setupService()
         service.fetchData(with: city.searchName)
         setupUI()
+    }
+
+    override func viewWillAppear(_ animated: Bool)
+    {
+        if let indexPath = tableView.indexPathForSelectedRow
+        {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
     }
 
     override func didReceiveMemoryWarning()
@@ -55,6 +64,8 @@ class StoreListViewController: UIViewController
     //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
+        let viewController = segue.destination as! StoreDetailViewController
+        viewController.store = selectedStore!
     }
 }
 
@@ -79,9 +90,15 @@ extension StoreListViewController: UITableViewDataSource
     }
 }
 
+// MARK: - UITableViewDelegate
 extension StoreListViewController: UITableViewDelegate
 {
-    
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath?
+    {
+        selectedStore = service.store(at: indexPath.row)
+        
+        return indexPath
+    }
 }
 
 extension StoreListViewController: StoreListDelegate
