@@ -22,17 +22,13 @@ class StoreListService: NSObject
     func fetchData(with cityName: String)
     {
         stores.removeAll()
-        let storeListRequest = Request.StoreList(searchText: cityName)
-        NetworkManager.shared.execute(storeListRequest, success: { response in
-            if let response = response as? [String: Any], let result = response["result"] as? [Any]
+
+        let request = Request.StoreList(searchText: cityName)
+        
+        NetworkManager.shared.execute(request, success: { response in
+            if let response = response as? [String: Any], let result = response["result"] as? [[String: Any]]
             {
-                for store in result
-                {
-                    if let storeData = store as? [String: Any]
-                    {
-                        self.stores.append(Store(with: storeData))
-                    }
-                }
+                self.stores = request.transforming(fromArray: result)
             }
             
             self.delegate?.didFinishFetchingData()

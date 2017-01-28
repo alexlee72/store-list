@@ -16,6 +16,8 @@ protocol APIRequest
     
     func parameters() -> Parameters?
     func headers() -> [String: String]?
+    func transforming<T: Deserializable>(fromArray array: [[String: Any]]) -> [T]
+    func transforming<T: Deserializable>(fromDictionary dict: [String: Any]) -> T
 }
 
 extension APIRequest
@@ -28,5 +30,24 @@ extension APIRequest
     func headers() -> [String: String]?
     {
         return nil
+    }
+
+    func transforming<T: Deserializable>(fromArray array: [[String: Any]]) -> [T]
+    {
+        var items = [T]()
+        for itemData in array
+        {
+            let item = T.init(with: itemData)
+            items.append(item)
+        }
+        
+        return items
+    }
+    
+    func transforming<T: Deserializable>(fromDictionary dict: [String: Any]) -> T
+    {
+        let item = T.init(with: dict)
+        
+        return item
     }
 }
