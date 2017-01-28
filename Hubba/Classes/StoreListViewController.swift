@@ -57,7 +57,6 @@ class StoreListViewController: UIViewController
     {
         navigationItem.title = city.displayName
         tableView.tableFooterView = UIView()
-        spinnerView.activityIndicatorViewStyle = .whiteLarge
         spinnerView.color = UIColor.gray
     }
     

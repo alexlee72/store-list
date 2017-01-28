@@ -26,6 +26,7 @@ enum StoreDetailInfo: Int
 class StoreDetailViewController: UIViewController
 {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var spinnerView: UIActivityIndicatorView!
     fileprivate let cellIdentifier = "StoreDetailCell"
     var store: Store!
     fileprivate var service: StoreDetailService!
@@ -48,6 +49,7 @@ class StoreDetailViewController: UIViewController
     {
         navigationItem.title = store.name
         tableView.tableFooterView = UIView()
+        spinnerView.color = UIColor.gray
     }
     
     private func setupService()
@@ -98,6 +100,10 @@ extension StoreDetailViewController: StoreDetailDelegate
 {
     func didFinishFetchingData()
     {
-        self.tableView.reloadData()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5)
+        {
+            self.tableView.reloadData()
+            self.spinnerView.stopAnimating()
+        }
     }
 }
