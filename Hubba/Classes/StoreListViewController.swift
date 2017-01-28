@@ -19,6 +19,7 @@ import UIKit
 class StoreListViewController: UIViewController
 {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var spinnerView: UIActivityIndicatorView!
     var city: City!
     fileprivate let cellIdentifier = "StoreCell"
     fileprivate var service: StoreListService!
@@ -46,6 +47,9 @@ class StoreListViewController: UIViewController
     private func setupUI()
     {
         navigationItem.title = city.displayName
+        tableView.tableFooterView = UIView()
+        spinnerView.activityIndicatorViewStyle = .whiteLarge
+        spinnerView.color = UIColor.gray
     }
     
     //MARK: - Navigation
@@ -84,6 +88,9 @@ extension StoreListViewController: StoreListDelegate
 {
     func didFinishFetchingData()
     {
-        tableView.reloadData()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.tableView.reloadData()
+            self.spinnerView.stopAnimating()
+        }
     }
 }
