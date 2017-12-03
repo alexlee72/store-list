@@ -14,11 +14,15 @@ class CityListService: NSObject
     
     func fetchData()
     {
-        cities.append(City(displayName: "Ajax", searchName: "ajax"))
-        cities.append(City(displayName: "Barrie", searchName: "barrie"))
-        cities.append(City(displayName: "Collingwood", searchName: "collingwood"))
-        cities.append(City(displayName: "Missisauga", searchName: "missisauga"))
-        cities.append(City(displayName: "Toronto", searchName: "toronto"))
+        let dataSource: [(displayName: String, searchName: String)] = [("Ajax", "ajax"),
+                                                                       ("Barrie", "Barrie"),
+                                                                       ("Collingwood", "Collingwood"),
+                                                                       ("Missisauga", "Missisauga"),
+                                                                       ("Toronto", "Toronto")]
+        
+        dataSource.forEach { displayName, searchName in
+            self.cities.append(City(displayName: displayName, searchName: searchName))
+        }
     }
     
     func numberOfItems() -> Int

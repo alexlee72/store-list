@@ -26,7 +26,7 @@ public class NetworkManager: NSObject {
         self.baseURL = baseURL
     }
     
-    func executeAPIWith(path: String, method: HTTPMethod, parameters: Parameters? = nil, headers: [String: String]? = nil) -> DataRequest
+    func makeRequestWith(path: String, method: HTTPMethod, parameters: Parameters? = nil, headers: [String: String]? = nil) -> DataRequest
     {
         let url = String(format: "%@%@", baseURL, path)
         var encoding: ParameterEncoding?
@@ -48,7 +48,7 @@ extension NetworkManager: APIExecutable
 {
     func execute(_ request: APIRequest, success: ((Any?) -> ())?, failure: ((NSError) -> ())?)
     {
-        executeAPIWith(path: request.path, method: request.method, parameters: request.parameters()).responseJSON { response in
+        makeRequestWith(path: request.path, method: request.method, parameters: request.parameters()).responseJSON { response in
             switch response.result
             {
             case .success(let value):
